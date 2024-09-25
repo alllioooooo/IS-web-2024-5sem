@@ -51,7 +51,14 @@ body {
     margin: 0 auto;
 }
 
+pre {
+    line-height: 1.5;
+}
+
+
 .lol h1{
+    word-spacing: 10px;
+    letter-spacing: 2px;
     font-size: var(--razmer-ZAGOLOWKA-regular);
     color: var(--chernyi);
     background: var(--prosloyka-mezhdu-korkoy-i-myakotu);
@@ -138,6 +145,7 @@ footer {
 }
 .prod {
     width: 200px;
+    line-height: 50px;
     margin: 0 auto
 }
 
@@ -190,6 +198,7 @@ footer {
 
 .table-header {
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .table-row:nth-child(odd) {
