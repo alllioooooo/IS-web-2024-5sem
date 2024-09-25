@@ -51,6 +51,17 @@ body {
     margin: 0 auto;
 }
 
+.lol h1{
+    font-size: var(--razmer-ZAGOLOWKA-regular);
+    color: var(--chernyi);
+    background: var(--prosloyka-mezhdu-korkoy-i-myakotu);
+    border-radius: 28px;
+    width: max-content;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
 .main-content h2{
     font-size: var(--razmer-ZAGOLOWKA-1);
     color: var(--myakot-arbuza-yarkaya);
@@ -148,4 +159,51 @@ footer {
 .ascii {
     width: max-content;
     margin: 0 auto;
+}
+
+.table-container {
+    width: max-content;
+    margin: 20px 0;
+}
+
+.quote-container {
+    margin-bottom: 20px;
+    font-style: var(--shrift-bookw);
+    font-size: 18px;
+}
+
+.quote {
+    margin-bottom: 10px;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 10px;
+}
+
+.table div {
+    padding: 10px;
+    text-align: center;
+}
+
+.table-header {
+    font-weight: bold;
+}
+
+.table-row:nth-child(odd) {
+    color: var(--arbuznie-poloski);
+    background-color: var(--prosloyka-mezhdu-korkoy-i-myakotu)
+}
+
+.table-row:nth-child(even) {
+    color: var(--arbuznie-poloski);
+    background-color: var(--prosloyka-mezhdu-korkoy-i-myakotu)
+}
+
+@media (max-width: 768px) {
+    .table {
+        grid-template-columns: 1fr;
+    }
 }
