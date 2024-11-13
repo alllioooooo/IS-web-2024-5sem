@@ -47,6 +47,11 @@ body {
     transform: scale(1.2);
 }
 
+a.active .icon {
+    transform: scale(1.2);
+    border: 2px;
+}
+
 .main-content {
     min-height: 55vh;
     text-align: center;
