@@ -41,6 +41,10 @@
                 <div class="table-row"><a href="https://youtube.com/shorts/N_jioY3B3Q8?si=qNvwCXSUuybfEL5B" target="_blank">https://youtube.com/shorts/N_jioY3B3Q8?si=qNvwCXSUuybfEL5B</a></div>
             </div>
         </div>
+        <div class="buttons">
+            <button id="addQuoteButton" class="btn addQuoteButton"> Добавь SVOю цитату про арбуZы</button>
+            
+        </div>
     </main>
 
     <footer>
@@ -58,6 +62,24 @@
         </div>
     </footer>
 
+    <div class="gif-overlay" id="gifOverlay">
+        <img src="../images/ARBUZNYI_BOOM.gif" alt="Арбузный бум">
+    </div>
+
+    <audio id="gifAudio" src="../YANDEXMUSIC/zvuk-vzryva.mp3"></audio>
+
+    <form class="form-overlay" id="formOverlay">
+        <div class="form-container">
+            <button class="close-button" id="closeFormButton">&times;</button>
+            <h2>Форма для цЫтат</h2>
+            <input type="text" id="quoteInput" placeholder="Введите цитату" required>
+            <input type="url" id="linkInput" placeholder="Введите ссылку" required>
+            <button id="submitQuoteButton">SUBMIT</button>
+        </div>
+    </form>
+    
+
+    <script src="../umnoe/dobav_citaty_pro_arbuz_runtime.js"></script>
     <script src="../umnoe/semechki.js"></script>
     <script src="../umnoe/loading_inspired_by_eminbegin.js" defer></script>
 </body>
