@@ -221,25 +221,27 @@ footer {
 
 .table-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 60px;
     width: 100%;
     gap: 10px;
+    align-items: center;
 }
 
 .table-header {
     font-weight: bold;
-    text-decoration: underline;
     text-align: center;
+    padding: 10px;
 }
 
 .table-row {
     padding: 10px;
     text-align: center;
+    background-color: var(--prosloyka-mezhdu-korkoy-i-myakotu);
+    border-radius: 8px;
     word-wrap: break-word;
     word-break: break-all;
     overflow-wrap: anywhere;
 }
-
 
 .table-row:nth-child(odd) {
     color: var(--arbuznie-poloski);
@@ -457,4 +459,81 @@ footer {
     border: none;
     background: red;
     border: none;
+}
+
+.reaction {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.selected-reaction {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.reaction-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--prosloyka-mezhdu-korkoy-i-myakotu);
+    border: 3px solid var(--arbuznaya-korka);
+    border-radius: 10px;
+    padding: 5px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+    width: calc((30px * 8) + (5px * 7) + 10px);
+    max-width: calc(100% - 40px);
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow-x: auto;
+    margin-right: 10px;
+
+}
+
+@media (max-width: 768px) {
+    .reaction-menu {
+        width: calc((30px * 8) + (5px * 7) + 10px);
+        max-width: calc(100% - 20px);
+        left: 10px;
+        right: auto;
+        margin-right: 10px;
+    }
+}
+
+.reaction-menu img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.reaction-menu img:hover {
+    transform: scale(1.2);
+}
+
+.selected-reaction-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.selected-reaction {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.reaction-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--chernyi);
+    margin-left: 5px;
 }
