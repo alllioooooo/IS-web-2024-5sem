@@ -25,8 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
         linkRow.classList.add("table-row");
         linkRow.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
 
+        const reactionRow = document.createElement("div");
+        reactionRow.classList.add("table-row", "reaction");
+        reactionRow.textContent = "?";
+
         quoteTable.appendChild(quoteRow);
         quoteTable.appendChild(linkRow);
+        quoteTable.appendChild(reactionRow);
     }
 
     addQuoteButton.addEventListener("click", () => {
