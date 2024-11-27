@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const localStorageKey = "userData";
 
     const loadingVideoContainer = document.getElementById("loading-video-container");
-    const loadingVideo = document.getElementById("loading-video");
+    const loadingGif = document.getElementById("loading-gif");
+    const loadingAudio = document.getElementById("loading-audio");
     const mainContent = document.querySelector(".main-content");
 
     const fetchData = async () => {
@@ -20,28 +21,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    const playLoadingVideo = () => {
-        return new Promise((resolve) => {
-            loadingVideoContainer.style.display = "flex";
-            mainContent.style.display = "none";
+    const playLoadingAnimation = async () => {
+        loadingVideoContainer.style.display = "flex";
+        mainContent.style.display = "none";
 
-            loadingVideo.currentTime = 0;
-            loadingVideo.muted = false;
-            loadingVideo.play();
+        const gifSrc = loadingGif.src;
+        loadingGif.src = "";
+        loadingGif.src = gifSrc;
+        loadingGif.style.display = "block";
 
-            setTimeout(() => {
-                resolve();
-            }, 2000);
-        });
+        loadingAudio.currentTime = 0;
+        try {
+            await loadingAudio.play();
+        } catch (error) {
+            console.error("Ошибка воспроизведения аудио:", error);
+        }
+
+        return new Promise((resolve) => setTimeout(resolve, 1800));
     };
 
-    const stopLoadingVideo = () => {
+    const stopLoadingAnimation = () => {
         loadingVideoContainer.style.display = "none";
         mainContent.style.display = "block";
 
-        loadingVideo.pause();
-        loadingVideo.currentTime = 0;
-        loadingVideo.muted = true;
+        loadingGif.style.display = "none";
+
+        loadingAudio.pause();
+        loadingAudio.currentTime = 0;
     };
 
     const getUserData = async () => {
@@ -49,13 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!userData) {
             console.log("Данные отсутствуют в localStorage. Начинается загрузка...");
+            await playLoadingAnimation();
 
-            const [data] = await Promise.all([fetchData(), playLoadingVideo()]);
-            stopLoadingVideo();
+            const data = await fetchData();
+            stopLoadingAnimation();
             return data;
         } else {
             console.log("Данные найдены в localStorage.");
-            stopLoadingVideo();
+            stopLoadingAnimation();
             return JSON.parse(userData);
         }
     };

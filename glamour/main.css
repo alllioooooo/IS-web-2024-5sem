@@ -646,3 +646,10 @@ footer {
     border-radius: 15px;
 }
 
+#loading-gif {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid var(--myakot-arbuza-yarkaya);
+    border-radius: 15px;
+    display: none;
+}
