@@ -303,7 +303,11 @@ footer {
         overflow-wrap: anywhere;
     }
 
-    .icons {
+    #exchange {
+        display: none;
+    }
+
+    #wallet {
         display: none;
     }
 
@@ -537,3 +541,108 @@ footer {
     color: var(--chernyi);
     margin-left: 5px;
 }
+
+.user-profile {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--prosloyka-mezhdu-korkoy-i-myakotu);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 400px;
+    color: var(--chernyi);
+}
+
+.user-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid var(--arbuznaya-korka);
+    margin-bottom: 20px;
+}
+
+.user-profile h2 {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.user-profile p {
+    font-size: var(--razmer-v-cherdake-no-naoborot);
+    color: var(--myakot-arbuza-temnaya);
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+.password {
+    font-size: var(--razmer-v-cherdake-no-naoborot);
+    background-color: var(--arbuznaya-korka);
+    color: var(--belyi);
+    padding: 2px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.password:hover {
+    background-color: var(--myakot-arbuza-yarkaya);
+}
+
+.registration {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: var(--razmer-v-cherdake-no-naoborot);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--belyi);
+    background-color: var(--arbuznaya-korka);
+    transition: background-color 0.3s ease;
+}
+
+.registration:hover {
+    background-color: var(--myakot-arbuza-srednyaya);
+}
+
+@media (max-width: 768px) {
+    .user-profile {
+        padding: 15px;
+        margin: 10px;
+        max-width: 90%;
+    }
+
+    .user-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .user-profile p {
+        font-size: calc(var(--razmer-v-cherdake-no-naoborot) * 0.9);
+    }
+
+    .registration {
+        padding: 8px 16px;
+        font-size: calc(var(--razmer-v-cherdake-no-naoborot) * 0.9);
+    }
+}
+
+#loading-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-video {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid var(--myakot-arbuza-yarkaya);
+    border-radius: 15px;
+}
+
