@@ -13,21 +13,41 @@
         <a href="../index.html"> <img src="../images/logo.png" alt="Логотип" class="logo"> </a>
         <div class="icons">
             <a href="exchange.html">
-                <img src="../images/exchange.png" alt="Курс" class="icon">
+                <img src="../images/exchange.png" alt="Курс" id="exchange" class="icon">
             </a>
             <a href="wallet.html">
-                <img src="../images/wallet.png" alt="Кошелек" class="icon">
+                <img src="../images/wallet.png" alt="Кошелек" id="wallet" class="icon">
             </a>
             <a href="account.html" class="active">
-                <img src="../images/account.png" alt="Аккаунт" class="icon">
+                <img src="../images/account.png" alt="Аккаунт" id="account" class="icon">
             </a>
         </div>
     </header>
 
+    <div id="loading-video-container" style="display: none;">
+        <!-- <video id="loading-video" autoplay>
+            <source src="../RuTUBE/BOOO.webm" type="video/webm">
+            Ваш браузер не поддерживает тег video.
+        </video> -->
+        <img id="loading-gif" src="../RuTUBE/if_video_is_not_working/BOOO.gif" alt="Loading..." style="display: none;">
+        <audio id="loading-audio" preload="auto" src="../RuTUBE/if_video_is_not_working/BOOO.mp3" loop></audio>
+    </div>
+    
     <main class="main-content">
         <p class="load-time"></p>
         <div class="container">
-            <h1>ACCOUNT</h1>
+            <div class="user-profile">
+                <img src="" alt="User Picture" class="user-picture">
+                <h2 class="user-name"></h2>
+                <p><strong>ПО4ТА:</strong> <span class="user-email"></span></p>
+                <p><strong>Адрес:</strong> <span class="user-address"></span></p>
+                <p><strong>НИКНЕЙМ В АСЬКЕ:</strong> <span class="user-username"></span></p>
+                <p>
+                    <strong>Пöрöль:</strong> 
+                    <span id="password" class="password" data-password="">••••••••</span>
+                </p>
+                <button id="logout" class="registration">Выход</button>
+            </div>
         </div>
     </main>
 
@@ -45,8 +65,8 @@
             <p>2024-2025 ©alllioooooo</p>
         </div>
     </footer>
-    <script src="../umnoe/dismiss.js" defer></script>
     <script src="../umnoe/semechki.js"></script>
     <script src="../umnoe/loading_inspired_by_eminbegin.js" defer></script>
+    <script src="../umnoe/aaaa_pi_pii_piiiiii_pi.js" defer></script>
 </body>
 </html>
