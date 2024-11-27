@@ -649,6 +649,7 @@ footer {
 #loading-gif {
     max-width: 90%;
     max-height: 90%;
+    margin: 0 auto;
     border: 2px solid var(--myakot-arbuza-yarkaya);
     border-radius: 15px;
     display: none;

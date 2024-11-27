@@ -30,14 +30,26 @@
             Ваш браузер не поддерживает тег video.
         </video> -->
         <img id="loading-gif" src="../RuTUBE/if_video_is_not_working/BOOO.gif" alt="Loading..." style="display: none;">
-        <audio id="loading-audio" src="../RuTUBE/if_video_is_not_working/BOOO.mp3" loop></audio>
+        <audio id="loading-audio" preload="auto" src="../RuTUBE/if_video_is_not_working/BOOO.mp3" loop></audio>
     </div>
     
     <main class="main-content">
         <p class="load-time"></p>
-        <div class="container"></div>
+        <div class="container">
+            <div class="user-profile">
+                <img src="" alt="User Picture" class="user-picture">
+                <h2 class="user-name"></h2>
+                <p><strong>ПО4ТА:</strong> <span class="user-email"></span></p>
+                <p><strong>Адрес:</strong> <span class="user-address"></span></p>
+                <p><strong>НИКНЕЙМ В АСЬКЕ:</strong> <span class="user-username"></span></p>
+                <p>
+                    <strong>Пöрöль:</strong> 
+                    <span id="password" class="password" data-password="">••••••••</span>
+                </p>
+                <button id="logout" class="registration">Выход</button>
+            </div>
+        </div>
     </main>
-    
 
     <footer>
         <div class="flex">
